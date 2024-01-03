@@ -2,6 +2,7 @@ version: 2
 
 models:
   - name: enterprise_orders_base
+    access: public
     description: List of orders made by company employees
     columns:
       - name: employee_id 

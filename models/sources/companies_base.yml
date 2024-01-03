@@ -2,6 +2,7 @@ version: 2
 
 models:
   - name: companies_base
+    access: public
     description: List of companies with new companies added over time. Intended to mimic a live database source with no change tracking.
     columns:
       - name: id
