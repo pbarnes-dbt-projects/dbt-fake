@@ -11,7 +11,7 @@
     )
 }}
 
-{% set max_per_day = var('max_per_day', 10) %}
+{% set max_per_day = var('max_per-_day', 10) %}
 {% set allow_zero = var('allow_zero', True) %}
 {% set start_date = get_default_start_date() %}
 {% set end_date = get_default_end_date() %}
@@ -22,7 +22,7 @@ with people as (
                                allow_zero = allow_zero,
                                start_date = start_date, 
                                end_date = end_date, 
-                               columns=['id', 'first_name', 'last_name', 'gender', 'email', 'age', 'username']
+                               columns=['id','first_name','last_name','gender','phone_number','address','birthdate','blood_type','favorite_color','credit_score']
    )
 }}
 ),
