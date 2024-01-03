@@ -21,12 +21,22 @@ models:
       - name: last_name
         description: Last name of the employee
       - name: gender
-        description: Gender of the employee. Male, female or other.
+        description: Gender of the employee. M for Male, F for Female or X for other.
+      - name: phone_number
+        description: Country code and 10 digit phone number
+      - name: address
+        description: JSON blob containing geospatial information
       - name: email 
         description: Email address of the employee
       - name: age 
         description: Age of the employee
-      - name: username 
-        description: Username of the employee 
-      - name: date_added 
-        description: Fake date the employee was first added. Exists to help in troubleshooting. Ignore this to fully mimic a live DB with no change tracking.
+      - name: birthdate
+        description: Employee's birthdate in YYYY-MM-DD format
+      - name: blood_type
+        description: Employee's blood type
+      - name: favorite_color
+        description: Employee's favorite color
+      - name: credit_score  
+        description: Employee's credit score according to US credit bureus.
+        tests:
+          - not_null 

@@ -3,7 +3,7 @@
     return('')
 {% endif %}
 
-    with dates as (
+    with inner_dates as (
         select 
             date,
             cast(
@@ -19,10 +19,10 @@
             date,
             num_records,
             row_number() over (order by null) as row_num
-        from dates 
+        from inner_dates 
         -- This join creates the duplicate dates
         inner join {{ ref('fake_numbers') }} as numbers
-            on dates.num_records = numbers.number
+            on inner_dates.num_records = numbers.number
     )    
     select * from date_rows
 {% endmacro %}
